@@ -102,14 +102,14 @@ const OrdersPage = () => {
           >
             <img src={getOrderImage(order.status)} alt="Order visual" className="h-44 w-full object-cover" />
             <div className="p-5">
-              <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900">Order #{order.id}</h3>
                   <p className="text-sm text-slate-500">
                     {order.customer_name} • {order.customer_email}
                   </p>
                 </div>
-                <div className="text-right">
+                <div className="text-left sm:text-right">
                   <span
                     className={`inline-flex rounded-full border px-3 py-1 text-xs font-semibold ${statusClasses[order.status] || 'bg-slate-100 text-slate-700 border-slate-200'}`}
                   >
@@ -150,7 +150,7 @@ const OrdersPage = () => {
                   type="button"
                   onClick={() => handleCancelOrder(order.id)}
                   disabled={cancellingOrderId === order.id}
-                  className="mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-700 transition hover:bg-red-100 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="mt-4 w-full rounded-lg border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-700 transition hover:bg-red-100 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
                 >
                   {cancellingOrderId === order.id ? 'Cancelling...' : 'Cancel placed order'}
                 </button>

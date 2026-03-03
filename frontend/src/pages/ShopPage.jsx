@@ -70,13 +70,13 @@ const ShopPage = () => {
         />
       </div>
 
-      <div className="mb-8 flex flex-wrap gap-2">
+      <div className="mb-8 flex flex-wrap gap-2 sm:gap-3">
         {categories.map((item) => (
           <button
             key={item}
             type="button"
             onClick={() => onCategoryChange(item)}
-            className={`rounded-lg border px-4 py-2 text-sm font-medium transition ${
+            className={`rounded-lg border px-3 py-2 text-xs font-medium transition sm:px-4 sm:text-sm ${
               activeCategory === item
                 ? 'border-slate-900 bg-slate-900 text-white'
                 : 'border-slate-200 bg-white text-slate-700 hover:border-slate-400'

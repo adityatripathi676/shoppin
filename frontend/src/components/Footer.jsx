@@ -21,7 +21,7 @@ const socials = [
 const Footer = () => {
   return (
     <footer className="mt-16 border-t border-white/40 bg-white/40 backdrop-blur">
-      <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-12">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="md:col-span-2">
             <h3 className="text-xl font-bold text-slate-900">
@@ -43,7 +43,7 @@ const Footer = () => {
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-700">Social</h4>
-            <div className="mt-3 flex items-center gap-2">
+            <div className="mt-3 flex flex-wrap items-center gap-2">
               {socials.map((social) => (
                 <a
                   key={social.name}
@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-slate-200/60 pt-4 text-sm text-slate-500">
+        <div className="mt-8 border-t border-slate-200/60 pt-4 text-xs text-slate-500 sm:text-sm">
           © {new Date().getFullYear()} Shoppin • Limited info footer • Built with animated gradient glass style
         </div>
       </div>

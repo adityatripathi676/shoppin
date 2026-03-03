@@ -56,12 +56,12 @@ const CheckoutPage = () => {
             </div>
           ) : (
             cartItems.map((item) => (
-              <div key={item.productId} className="flex flex-wrap items-center justify-between gap-3 rounded-xl bg-white p-4 soft-shadow">
-                <div>
+              <div key={item.productId} className="flex flex-col gap-3 rounded-xl bg-white p-4 soft-shadow sm:flex-row sm:items-center sm:justify-between">
+                <div className="min-w-0">
                   <p className="font-semibold text-slate-900">{item.product.name}</p>
                   <p className="text-sm text-slate-500">${item.product.price.toFixed(2)} each</p>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <button
                     type="button"
                     onClick={() => updateQuantity(item.productId, item.quantity - 1)}
@@ -149,7 +149,7 @@ const CheckoutPage = () => {
         </form>
       </div>
 
-      <aside className="h-fit rounded-2xl bg-white p-5 soft-shadow">
+      <aside className="h-fit rounded-2xl bg-white p-5 soft-shadow md:sticky md:top-24">
         <h2 className="text-lg font-semibold text-slate-900">Order Summary</h2>
         <div className="mt-4 space-y-2 text-sm text-slate-600">
           <div className="flex justify-between">

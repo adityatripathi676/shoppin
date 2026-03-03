@@ -38,7 +38,7 @@ const ContactPage = () => {
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        className="animated-gradient-card glass overflow-hidden rounded-2xl p-6 soft-shadow"
+        className="animated-gradient-card glass overflow-hidden rounded-2xl p-4 soft-shadow sm:p-6"
       >
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
@@ -74,7 +74,7 @@ const ContactPage = () => {
           <img
             src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80"
             alt="Contact support"
-            className="h-[340px] w-full rounded-xl object-cover"
+            className="h-56 w-full rounded-xl object-cover sm:h-72 md:h-[340px]"
           />
         </div>
       </motion.div>

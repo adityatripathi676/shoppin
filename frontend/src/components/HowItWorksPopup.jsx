@@ -28,7 +28,7 @@ const HowItWorksPopup = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen ? (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-3 sm:px-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -40,10 +40,10 @@ const HowItWorksPopup = ({ isOpen, onClose }) => {
             exit={{ opacity: 0, y: 24, scale: 0.98 }}
             transition={{ duration: 0.2 }}
             onClick={(event) => event.stopPropagation()}
-            className="w-full max-w-2xl rounded-2xl bg-white p-6 soft-shadow"
+            className="max-h-[88vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-4 soft-shadow sm:p-6"
           >
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-bold text-slate-900">How this website works</h2>
+            <div className="mb-4 flex items-center justify-between gap-2">
+              <h2 className="text-lg font-bold text-slate-900 sm:text-xl">How this website works</h2>
               <button
                 type="button"
                 onClick={onClose}

@@ -36,7 +36,7 @@ const HomePage = () => {
         />
         <div className="absolute inset-0 bg-black/60" />
 
-        <div className="relative mx-auto grid min-h-[100vh] max-w-6xl content-center gap-8 px-4 py-16 md:grid-cols-2 md:px-6 md:py-20">
+        <div className="relative mx-auto grid min-h-[100vh] max-w-6xl content-center gap-8 px-4 py-14 sm:py-16 md:grid-cols-2 md:px-6 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -44,20 +44,20 @@ const HomePage = () => {
             className="space-y-5"
           >
             <p className="text-sm font-semibold tracking-wide text-sky-300">Spring Collection 2026</p>
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl">
+            <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
               Dynamic shopping experience with smooth modern UI
             </h1>
             <p className="max-w-lg text-slate-200">
               Explore products, add to cart, checkout with demo payment, and store order records in local
               database for future viewing.
             </p>
-            <div className="flex gap-3">
-              <Link to="/shop" className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-200">
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link to="/shop" className="rounded-lg bg-white px-5 py-3 text-center text-sm font-semibold text-slate-900 hover:bg-slate-200">
                 Start Shopping
               </Link>
               <Link
                 to="/orders"
-                className="rounded-lg border border-slate-200 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                className="rounded-lg border border-slate-200 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-white/10"
               >
                 View Orders
               </Link>
@@ -75,7 +75,7 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2"
           >
             <div className="rounded-2xl border border-white/20 bg-white/15 p-5 text-white backdrop-blur">
               <p className="text-sm text-slate-200">Products</p>
@@ -85,7 +85,7 @@ const HomePage = () => {
               <p className="text-sm text-slate-200">Orders</p>
               <p className="mt-2 text-2xl font-bold">{dashboard.orderCount}</p>
             </div>
-            <div className="col-span-2 rounded-2xl border border-white/20 bg-white/15 p-5 text-white backdrop-blur">
+            <div className="rounded-2xl border border-white/20 bg-white/15 p-5 text-white backdrop-blur sm:col-span-2">
               <p className="text-sm text-slate-200">Revenue</p>
               <p className="mt-2 text-3xl font-bold">${dashboard.revenue.toFixed(2)}</p>
             </div>
