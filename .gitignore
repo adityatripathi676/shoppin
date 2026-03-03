@@ -5,3 +5,5 @@ node_modules/
 .env
 backend/.env
 backend/shopping.db
+backend/*.db-wal
+backend/*.db-shm
